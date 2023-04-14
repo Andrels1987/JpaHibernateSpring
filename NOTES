@@ -1,0 +1,2 @@
+hibernate.cfg.xml IS FOR hibernate
+persistence.xml IS FOR JPA(JAVA PERSISTENCE API)

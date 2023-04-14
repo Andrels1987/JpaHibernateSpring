@@ -1,0 +1,29 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+    <persistence-unit name="cinema"
+        transaction-type="RESOURCE_LOCAL">
+        <description>JPA Demo</description>
+        <!-- //ERROR: CHANGE THE PROVIDER -->
+        <!-- <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Mapping of classes. -->
+        <class>com.hibernate.models.User</class>
+        <!-- <class>com.sample.jpa.book.Author</class>
+        <class>com.sample.jpa.book.BookCategory</class> -->
+                
+        <!-- <jta-data-source>java:jboss/datasources/KitchensinkQuickstartDS</jta-data-source> -->
+        <!-- Setting of Hibernate ORM Properties. -->
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://192.168.1.105:3306/bdcinema" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="Andreluis87" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
